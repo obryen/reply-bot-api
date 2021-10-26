@@ -4,9 +4,10 @@ import { ConfigurationService } from './config.service';
 
 @Injectable()
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
-  constructor(private readonly configs: ConfigurationService) {}
+  constructor(private readonly configs: ConfigurationService) { }
 
   createTypeOrmOptions(): TypeOrmModuleOptions {
+    console.log('Base folder', this.configs.baseFolder + '/modules/replies/models/*.entity{.ts,.js}',)
     return {
       type: 'postgres',
       host: this.configs.databaseHost,
@@ -15,8 +16,8 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       password: this.configs.databasePassword,
       database: this.configs.databaseName,
       entities: [
-        this.configs.baseFolder + '/modules/**/*.entity{.ts,.js}',
-        this.configs.baseFolder + '/modules/**/*.view{.ts,.js}',
+        'Base folder', this.configs.baseFolder + '/modules/replies/models/*.entity{.ts,.js}',
+        'dist/src/modules/replies/models/*.entity{.ts,.js}',
       ],
       migrations: [
         this.configs.baseFolder + '/database/migrations/**/*{.ts,.js}',
