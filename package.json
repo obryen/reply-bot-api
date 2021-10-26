@@ -24,10 +24,11 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
-    "joi": "^17.3.0",
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "joi": "^17.3.0",
+    "pg": "^8.7.1",
     "postgres": "^1.0.2",
     "redis": "^3.1.2",
     "reflect-metadata": "^0.1.13",
