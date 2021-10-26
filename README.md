@@ -56,6 +56,6 @@ $ npm run test
 
 ## Next step considerations
 
--Given more time, I would further highly test some of the units missing some tests including [processInentsReply] and [fetchIntentsFromMessages] both located in replies.service.ts.
--I would also consider caching some of the network responses from to the [IntensAIApi] if the message contains certain similar keywords. Technologies used would be REDIS in Memory cache for ease of setup and access to the ttl (time to leave). It also provides a lot of flexibility when it comes to execution
--I would also add the [development.env] enviroment configuration file to the git ignore and store it securely on a different platform i.e azure secret files while creating a CI/CD pipeline that downloads it when initiated
+* Given more time, I would further highly test some of the units missing some tests including [processInentsReply] and [fetchIntentsFromMessages] both located in replies.service.ts.
+* I would also consider caching some of the network responses from to the [IntensAIApi] if the message contains certain similar keywords. Technologies used would be REDIS in Memory cache for ease of setup and access to the ttl (time to leave). It also provides a lot of flexibility when it comes to execution
+* I would also add the [development.env] enviroment configuration file to the git ignore and store it securely on a different platform i.e azure secret files while creating a CI/CD pipeline that downloads it when initiated
