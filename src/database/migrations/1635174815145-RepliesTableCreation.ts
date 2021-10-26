@@ -11,9 +11,7 @@ export class RepliesTableCreation1635174815145 implements MigrationInterface {
                   name: 'id',
                   isNullable: false,
                   isPrimary: true,
-                  isGenerated: true,
-                  default: 'uuid_generate_v4()',
-                  type: 'uuid',
+                  type: 'varchar',
                 }),
                 new TableColumn({
                   name: 'name',
