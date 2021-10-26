@@ -35,6 +35,7 @@ function validateInput(environmentConfig: EnvConfig): EnvConfig {
     TYPEORM_MIGRATIONSRUN: Joi.boolean().required(),
     TYPEORM_LOGGING: Joi.boolean().required(),
     INTENT_API: Joi.string().required(),
+    INTENT_API_KEY: Joi.string().required()
   });
 
   const { error, value: validatedEnvConfig } = envVarsSchema.validate(

@@ -49,8 +49,11 @@ export class ConfigurationService {
   get databasePassword(): string {
     return String(env.DATABASE_PASSWORD);
   }
-  
+
   get intentApi(): string {
     return String(env.INTENT_API);
+  }
+  get intentApiKey(): string {
+    return String(env.INTENT_API_KEY);
   }
 }
