@@ -26,7 +26,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is  a backend web server that exposes a single endpoint that accepts a bot identifier and a visitor written message. It returns a single reply corresponding to the highest predicted intent above the confidence threshold and thus being a relevant reply based on context
 
 ## Installation
 
@@ -52,24 +52,10 @@ $ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+## Next step considerations
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
+-Given more time, I would further highly test some of the units missing some tests including [processInentsReply] and [fetchIntentsFromMessages] both located in replies.service.ts.
+-I would also consider caching some of the network responses from to the [IntensAIApi] if the message contains certain similar keywords. Technologies used would be REDIS in Memory cache for ease of setup and access to the ttl (time to leave). It also provides a lot of flexibility when it comes to execution
+-I would also add the [development.env] enviroment configuration file to the git ignore and store it securely on a different platform i.e azure secret files while creating a CI/CD pipeline that downloads it when initiated
